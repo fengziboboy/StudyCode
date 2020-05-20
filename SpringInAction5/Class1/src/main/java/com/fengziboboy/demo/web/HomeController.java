@@ -1,4 +1,4 @@
-package com.fengziboboy.demo;
+package com.fengziboboy.demo.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
