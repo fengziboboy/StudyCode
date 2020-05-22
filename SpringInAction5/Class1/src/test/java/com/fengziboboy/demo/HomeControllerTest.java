@@ -1,6 +1,5 @@
 package com.fengziboboy.demo;
 
-import com.fengziboboy.demo.web.HomeController;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +18,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @create: 2020-05-20 16:28
  **/
 @RunWith(SpringRunner.class)
-@WebMvcTest(HomeController.class)
+@WebMvcTest(WebConfig.class)
 public class HomeControllerTest {
     @Autowired
     private MockMvc mockMvc;
@@ -29,6 +28,6 @@ public class HomeControllerTest {
         mockMvc.perform(get("/"))
                 .andExpect(status().isOk())
                 .andExpect(view().name("home"))
-                .andExpect(content().string(containsString("Welcome to here...")));
+                .andExpect(content().string(containsString("Welcome to BoBo Home!")));
     }
 }
