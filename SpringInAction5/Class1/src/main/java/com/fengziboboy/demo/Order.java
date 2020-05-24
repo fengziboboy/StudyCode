@@ -3,6 +3,7 @@ package com.fengziboboy.demo;
 import lombok.Data;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * @program: FirstDemo
@@ -22,4 +23,9 @@ public class Order {
     private String ccExpiration;
     private String ccCVV;
     private Date placedDate;
+    private List<Taco> tacos;
+
+    public void addDesign(Taco taco) {
+        this.tacos.add(taco);
+    }
 }
