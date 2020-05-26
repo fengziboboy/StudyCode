@@ -12,7 +12,5 @@ import java.util.List;
  * @create: 2020-05-22 20:51
  **/
 public interface IngredientRepository extends CrudRepository<Ingredient, String> {
-    List<Ingredient> findAll();
     Ingredient findOne(String id);
-    Ingredient save(Ingredient ingredient);
 }
